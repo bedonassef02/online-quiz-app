@@ -1,3 +1,5 @@
+const Question = require("../../../question/model/question.model");
+
 const calculateScoreForAnswer = async (answer) => {
   let score = 0;
   for (const questionAnswer of answer.questionAnswers) {
@@ -9,9 +11,8 @@ const calculateScoreForAnswer = async (answer) => {
   return score;
 };
 
-
 const calculateAverageGrade = (totalScore, answersLength) => {
-    return totalScore / answersLength;
-  };
-  
+  return totalScore / answersLength;
+};
+
 module.exports = { calculateScoreForAnswer, calculateAverageGrade };

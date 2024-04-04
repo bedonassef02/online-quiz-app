@@ -1,4 +1,4 @@
-const { query } = require("express-validator");
+const { body } = require("express-validator");
 const { handleValidationErrors } = require("../../../utils/validation-utils");
 const {
   checkIfQuizExists,
@@ -9,7 +9,7 @@ const {
 const { checkIfGradeExists } = require("../helpers/checkIfGradeExists");
 
 const calculateGradenValidator = [
-  query("quizId")
+  body("quizId")
     .notEmpty()
     .withMessage("quizId is required")
     .isMongoId()
