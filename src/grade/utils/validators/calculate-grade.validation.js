@@ -9,6 +9,7 @@ const {
 const { checkIfGradeExists } = require("../helpers/checkIfGradeExists");
 
 const calculateGradenValidator = [
+  
   body("quizId")
     .notEmpty()
     .withMessage("quizId is required")

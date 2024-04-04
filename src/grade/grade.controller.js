@@ -8,3 +8,9 @@ exports.calculateQuizGrades = async (req, res) => {
     res.status(400).json({ message: `Grade for Quiz ID ${quizId} has already been calculated.` });
   }
 };
+
+exports.findAll = async(req,res)=>{
+  const { quizId } = req.query;
+  const grades = await gradeService.findAll(quizId);
+  res.status(200).json(grades);
+}

@@ -1,6 +1,8 @@
 const { body } = require("express-validator");
 const { handleValidationErrors } = require("../../../utils/validation-utils");
 const quizService = require("../../../quiz/quiz.service");
+const { checkIfQuizExists } = require("../../../answer/utils/helpers/validationQuizActivation");
+const { checkIfQuizIsNotActive } = require("../../../grade/utils/helpers/checkIfQuiczIsNotActive");
 
 const createQuestionValidator = [
   body("text")
@@ -33,13 +35,9 @@ const createQuestionValidator = [
     .withMessage("quizId is required")
     .isMongoId()
     .withMessage("quizId must be a valid Mongo ID")
-    .custom(async (id) => {
-      const quiz = await quizService.findOne(id);
-      if(!quiz){
-        throw new Error("quiz not found");
-      }
-      return true;
-    }),
+    .custom(checkIfQuizExists)
+    .custom(checkIfQuizIsNotActive)
+    ,
   handleValidationErrors,
 ];
 
