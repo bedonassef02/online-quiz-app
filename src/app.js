@@ -11,6 +11,7 @@ const setupExpressApp = () => {
   app.use(morgan('dev'));
 
   app.use('/quiz', require('./quiz/quiz.router'));
+  app.use('/question', require('./question/question.router'));
 
   app.use(NotFoundException);
 
