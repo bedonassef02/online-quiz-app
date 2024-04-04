@@ -7,3 +7,7 @@ exports.create = async ({name, description, startTime, duration, password})=>{
 exports.findOne = (id) => {
     return Quiz.findById(id);
 }
+
+exports.remove = async(id) => {
+    return await Quiz.findByIdAndDelete(id);
+}

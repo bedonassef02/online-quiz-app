@@ -1,5 +1,5 @@
 const { body } = require('express-validator');
-const { handleValidationErrors } = require('../../utils/validation-utils');
+const { handleValidationErrors } = require('../../../utils/validation-utils');
 
 const createQuizValidator = [
     
