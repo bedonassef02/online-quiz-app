@@ -1,36 +1,24 @@
-require('dotenv').config();
-const { connectToDatabase } = require('./config/database.config');
-const { setupExpressApp } = require('./app');
+require("dotenv").config();
+const { connectToDatabase } = require("./config/database.config");
+const { setupExpressApp } = require("./app");
+const { handleGracefulShutdown } = require("./utils/handleGracefulShutdown");
 
 const startApp = async () => {
   await connectToDatabase();
   const app = setupExpressApp();
 
-  const port = process.env.PORT || 3001;
+  const port = process.env.PORT || 3000;
 
   const server = app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });
 
-  // Graceful shutdown
-  process.on('SIGINT', () => {
-    console.log('Received SIGINT. Shutting down gracefully...');
-    server.close(() => {
-      console.log('Server closed');
-      process.exit(0);
-    });
-  });
-
-  process.on('SIGTERM', () => {
-    console.log('Received SIGTERM. Shutting down gracefully...');
-    server.close(() => {
-      console.log('Server closed');
-      process.exit(0);
-    });
-  });
+  // Attach event listeners for SIGINT and SIGTERM signals
+  process.on("SIGINT", () => handleGracefulShutdown(server, "SIGINT"));
+  process.on("SIGTERM", () => handleGracefulShutdown(server, "SIGTERM"));
 };
 
 startApp().catch((err) => {
-  console.error('Failed to start the application:', err);
+  console.error("Failed to start the application:", err);
   process.exit(1);
 });
