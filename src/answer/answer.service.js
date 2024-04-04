@@ -6,3 +6,7 @@ exports.create = async ({ userId, questionAnswers, quizId }) => {
 exports.existingAnswer = async ({userId, quizId}) => {
   return (await Answer.findOne({ userId, quizId }));
 };
+
+exports.findAll = async (quizId) => {
+  return await Answer.find({ quizId });
+};
