@@ -59,6 +59,7 @@ An online Quiz application built with Node.js, Express, MongoDB, and other techn
 - `grade/`: Contains route handlers responsible for grading quiz submissions and managing user scores.
 - `question/`: Includes MongoDB models defining the structure and behavior of quiz questions and Answers.
 - `quiz/`: Holds application logic related to quiz creation, management, and taking, including controllers and services.
+- `user/`: This directory encompasses modules for user management, encompassing authentication, registration, login, profile management, and additional user-related functionality, including controllers, services, and models.
 - `utils/`: Houses custom middleware functions used throughout the application for tasks such as authentication, error handling, and request processing
 
 ## Contributing
