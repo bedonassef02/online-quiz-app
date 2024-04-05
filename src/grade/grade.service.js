@@ -4,19 +4,25 @@ const answersService = require("../answer/answer.service");
 const {
   calculateScoreForAnswer,
   calculateAverageGrade,
+  groupAnswersByUserId,
 } = require("./utils/helpers/calculateScoreForAnswer");
+
 exports.calculateQuizGrades = async (quizId) => {
   const answers = await answersService.findAll(quizId);
-  let totalScore = 0;
-  for (const answer of answers) {
-    const score = await calculateScoreForAnswer(answer);
-    totalScore += score;
+  const groupedAnswers = groupAnswersByUserId(answers);
+ 
+  for (const userId in groupedAnswers) {
+     const userAnswers = groupedAnswers[userId];
+     let totalScore = 0;
+     for (const answer of userAnswers) {
+       const score = await calculateScoreForAnswer(answer);
+       totalScore += score;
+     }
+     const averageGrade = calculateAverageGrade(totalScore, userAnswers.length);
+     await saveQuizGrade(quizId, averageGrade, userId);
   }
-
-  const averageGrade = calculateAverageGrade(totalScore, answers.length);
-  await saveQuizGrade(quizId, averageGrade);
-};
-
+ };
+ 
 exports.findAll = async (quizId) => {
   return await QuizGrade.find({ quizId }).select("userId grade");
 };

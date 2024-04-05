@@ -15,4 +15,14 @@ const calculateAverageGrade = (totalScore, answersLength) => {
   return totalScore / answersLength;
 };
 
-module.exports = { calculateScoreForAnswer, calculateAverageGrade };
+
+function groupAnswersByUserId(answers) {
+  return answers.reduce((acc, answer) => {
+     if (!acc[answer.userId]) {
+       acc[answer.userId] = [];
+     }
+     acc[answer.userId].push(answer);
+     return acc;
+  }, {});
+ }
+module.exports = { calculateScoreForAnswer, calculateAverageGrade, groupAnswersByUserId };
