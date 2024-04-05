@@ -2,7 +2,6 @@ const { body } = require('express-validator');
 const {
   handleValidationErrors,
 } = require('../../../utils/middlewares/validation-utils.middleware');
-const quizService = require('../../../quiz/quiz.service');
 const {
   checkIfQuizExists,
 } = require('../../../answer/utils/helpers/checking/is-active.helper');

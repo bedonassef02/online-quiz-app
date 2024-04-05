@@ -1,4 +1,4 @@
-const { query, param, body } = require('express-validator');
+const { param, body } = require('express-validator');
 const {
   handleValidationErrors,
 } = require('../../../utils/middlewares/validation-utils.middleware');
