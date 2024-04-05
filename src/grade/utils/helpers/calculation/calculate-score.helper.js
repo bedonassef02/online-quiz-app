@@ -1,4 +1,4 @@
-const Question = require("../../../../question/model/question.model");
+const Question = require('../../../../question/model/question.model');
 
 const calculateScoreHelper = async (answer) => {
   let score = 0;
@@ -15,14 +15,17 @@ const calculateAverageGrade = (totalScore, answersLength) => {
   return totalScore / answersLength;
 };
 
-
 function groupAnswersByUserId(answers) {
   return answers.reduce((acc, answer) => {
-     if (!acc[answer.userId]) {
-       acc[answer.userId] = [];
-     }
-     acc[answer.userId].push(answer);
-     return acc;
+    if (!acc[answer.userId]) {
+      acc[answer.userId] = [];
+    }
+    acc[answer.userId].push(answer);
+    return acc;
   }, {});
- }
-module.exports = { calculateScoreForAnswer: calculateScoreHelper, calculateAverageGrade, groupAnswersByUserId };
+}
+module.exports = {
+  calculateScoreForAnswer: calculateScoreHelper,
+  calculateAverageGrade,
+  groupAnswersByUserId,
+};

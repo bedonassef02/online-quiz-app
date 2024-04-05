@@ -1,11 +1,11 @@
-const { connectToDatabase } = require("./config/database.config");
-const { setupExpressApp } = require("./app");
-const { handleGracefulShutdown } = require("./utils/error-handling/graceful-shutdown");
-process.loadEnvFile('./.env')
-
+const { connectToDatabase } = require('./config/database.config');
+const { setupExpressApp } = require('./app');
+const {
+  handleGracefulShutdown,
+} = require('./utils/error-handling/graceful-shutdown');
+process.loadEnvFile('./.env');
 
 const startApp = async () => {
-  
   await connectToDatabase();
 
   const app = setupExpressApp();
@@ -17,11 +17,11 @@ const startApp = async () => {
   });
 
   // Attach event listeners for SIGINT and SIGTERM signals
-  process.on("SIGINT", () => handleGracefulShutdown(server, "SIGINT"));
-  process.on("SIGTERM", () => handleGracefulShutdown(server, "SIGTERM"));
+  process.on('SIGINT', () => handleGracefulShutdown(server, 'SIGINT'));
+  process.on('SIGTERM', () => handleGracefulShutdown(server, 'SIGTERM'));
 };
 
 startApp().catch((err) => {
-  console.error("Failed to start the application:", err);
+  console.error('Failed to start the application:', err);
   process.exit(1);
 });

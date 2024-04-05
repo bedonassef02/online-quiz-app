@@ -1,4 +1,4 @@
-const QuizGrade = require("../../../model/grade.model");
+const QuizGrade = require('../../../model/grade.model');
 
 const saveHelper = async (quizId, averageGrade, userId) => {
   const quizGrade = new QuizGrade({

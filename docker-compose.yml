@@ -1,11 +1,11 @@
 version: '3.8'
 services:
- node-app:
+  node-app:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - '3000:3000'
     volumes:
       - .:/app
     environment:
@@ -13,15 +13,15 @@ services:
     depends_on:
       - mongo
       - redis
- mongo:
+  mongo:
     image: mongo
     ports:
-      - "27017:27017"
+      - '27017:27017'
     logging:
       driver: none
- redis:
+  redis:
     image: redis
     ports:
-      - "6379:6379"
+      - '6379:6379'
     logging:
       driver: none

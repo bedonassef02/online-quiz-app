@@ -1,12 +1,12 @@
-const fs = require("fs");
-const questionService = require("../../../question/question.service");
+const fs = require('fs');
+const questionService = require('../../../question/question.service');
 
 const insertQuestionsForQuizzes = async (quizIds) => {
- try {
+  try {
     // Define the path to the JSON file containing question data
-    const questionDataFilePath = "./src/question/utils/db-seed/questions.json";
+    const questionDataFilePath = './src/question/utils/db-seed/questions.json';
     // Read the content of the JSON file
-    const fileContent = fs.readFileSync(questionDataFilePath, "utf8");
+    const fileContent = fs.readFileSync(questionDataFilePath, 'utf8');
 
     // Parse the JSON content into an array of question objects
     const questionEntries = JSON.parse(fileContent);
@@ -22,10 +22,10 @@ const insertQuestionsForQuizzes = async (quizIds) => {
       }
     }
 
-    console.log("Question data inserted successfully");
- } catch (error) {
-    console.error("Error inserting question data:", error.message);
- }
+    console.log('Question data inserted successfully');
+  } catch (error) {
+    console.error('Error inserting question data:', error.message);
+  }
 };
 
 module.exports = { insertQuestionsForQuizzes };

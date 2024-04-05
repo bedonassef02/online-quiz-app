@@ -1,5 +1,5 @@
 function closeServerAndExit() {
-  console.log("Server closed");
+  console.log('Server closed');
   process.exit(0);
 }
 

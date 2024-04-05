@@ -1,18 +1,20 @@
-const questionService = require("../../../../question/question.service");
+const questionService = require('../../../../question/question.service');
 
 // Function to validate that the questionId is related to the quizId
-const isRelatedHelper = async (value, {req}) => {
-    const {quizId} = req.body;
-    for (const answer of value) {
-        const question = await questionService.findOne(answer.questionId);
-        if (!question) {
-            throw new Error(`Question with ID ${answer.questionId} not found`);
-        }
-        if (question.quizId.toString() !== quizId) {
-            throw new Error(`Question with ID ${answer.questionId} not related to the quiz`);
-        }
+const isRelatedHelper = async (value, { req }) => {
+  const { quizId } = req.body;
+  for (const answer of value) {
+    const question = await questionService.findOne(answer.questionId);
+    if (!question) {
+      throw new Error(`Question with ID ${answer.questionId} not found`);
     }
-    return true;
+    if (question.quizId.toString() !== quizId) {
+      throw new Error(
+        `Question with ID ${answer.questionId} not related to the quiz`
+      );
+    }
+  }
+  return true;
 };
 
-module.exports = {validateQuestionRelationToQuiz: isRelatedHelper}
+module.exports = { validateQuestionRelationToQuiz: isRelatedHelper };

@@ -1,7 +1,11 @@
 const express = require('express');
 const morgan = require('morgan');
-const { NotFoundException } = require('./utils/middlewares/not-found.middleware');
-const { HandleException } = require('./utils/middlewares/catch-errors.middleware');
+const {
+  NotFoundException,
+} = require('./utils/middlewares/not-found.middleware');
+const {
+  HandleException,
+} = require('./utils/middlewares/catch-errors.middleware');
 const { seedDatabase } = require('./utils/db-seed');
 
 const setupExpressApp = () => {
@@ -16,7 +20,7 @@ const setupExpressApp = () => {
   app.use('/answer', require('./answer/answer.router'));
   app.use('/grade', require('./grade/grade.router'));
 
-  seedDatabase()
+  seedDatabase();
 
   app.use(NotFoundException);
 

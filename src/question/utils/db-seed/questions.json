@@ -1,266 +1,260 @@
 [
-    {
-        "text": "What is the basic syntax for a 'for' loop in JavaScript?",
-        "options": [
-            "for (let i = 0; i < 10; i++)",
-            "for i = 0 to 10",
-            "for (i = 0; i <= 10; i++)",
-            "for (i = 0; i < 10; i++)",
-            "for (i = 0; i <= 10; i++)"
-        ],
-        "correctAnswer": "for (let i = 0; i < 10; i++)",
-        "quizId": "quiz1"
-    },
-    {
-        "text": "What is the time complexity of a binary search algorithm?",
-        "options": [
-            "O(n)",
-            "O(log n)",
-            "O(n log n)",
-            "O(n^2)",
-            "O(n^3)"
-        ],
-        "correctAnswer": "O(log n)",
-        "quizId": "quiz1"
-    },
-    {
-        "text": "What is the purpose of the 'useState' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To manage state in functional components",
-        "quizId": "quiz2"
-    },
-    {
-        "text": "What is the difference between '==' and '===' in JavaScript?",
-        "options": [
-            "'==' checks for value equality, '===' checks for type equality",
-            "'==' checks for type equality, '===' checks for value equality",
-            "'==' checks for reference equality, '===' checks for value equality",
-            "'==' checks for value equality, '===' checks for reference equality",
-            "'==' checks for reference equality, '===' checks for type equality"
-        ],
-        "correctAnswer": "'==' checks for value equality, '===' checks for type equality",
-        "quizId": "quiz2"
-    },
-    {
-        "text": "What is the purpose of the 'useEffect' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To handle side effects",
-        "quizId": "quiz2"
-    },
-    {
-        "text": "What is the difference between SQL and NoSQL databases?",
-        "options": [
-            "SQL databases are relational, NoSQL databases are non-relational",
-            "SQL databases are non-relational, NoSQL databases are relational",
-            "SQL databases are for web applications, NoSQL databases are for mobile applications",
-            "SQL databases are for mobile applications, NoSQL databases are for web applications",
-            "SQL databases are for databases, NoSQL databases are for spreadsheets"
-        ],
-        "correctAnswer": "SQL databases are relational, NoSQL databases are non-relational",
-        "quizId": "quiz3"
-    },
-    {
-        "text": "What is the purpose of the 'useContext' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To create context",
-        "quizId": "quiz3"
-    },
-    {
-        "text": "What is the purpose of the 'useReducer' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To manage state in functional components",
-        "quizId": "quiz3"
-    },
-    {
-        "text": "What is the purpose of the 'useRef' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To manage props",
-        "quizId": "quiz3"
-    },
-    {
-        "text": "What is the difference between a process and a thread?",
-        "options": [
-            "A process is a single instance of a running program, a thread is a part of a process",
-            "A process is a part of a program, a thread is a single instance of a running program",
-            "A process is a single instance of a running program, a thread is a part of a process",
-            "A process is a part of a program, a thread is a single instance of a running program",
-            "A process is a single instance of a running program, a thread is a part of a process"
-        ],
-        "correctAnswer": "A process is a single instance of a running program, a thread is a part of a process",
-        "quizId": "quiz4"
-    },
-    {
-        "text": "What is the purpose of the 'useMemo' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To manage props",
-        "quizId": "quiz4"
-    },
-    {
-        "text": "What is the purpose of the 'useCallback' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To manage props",
-        "quizId": "quiz4"
-    },
-    {
-        "text": "What is the purpose of the 'useImperativeHandle' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To manage props",
-        "quizId": "quiz4"
-    },
-    {
-        "text": "What is the difference between a stack and a queue?",
-        "options": [
-            "A stack is a linear data structure that follows a particular order in which the operations are performed, a queue is a linear data structure that follows a particular order in which the operations are performed",
-            "A stack is a linear data structure that follows a particular order in which the operations are performed, a queue is a linear data structure that follows a particular order in which the operations are performed",
-            "A stack is a linear data structure that follows a particular order in which the operations are performed, a queue is a linear data structure that follows a particular order in which the operations are performed",
-            "A stack is a linear data structure that follows a particular order in which the operations are performed, a queue is a linear data structure that follows a particular order in which the operations are performed",
-            "A stack is a linear data structure that follows a particular order in which the operations are performed, a queue is a linear data structure that follows a particular order in which the operations are performed"
-        ],
-        "correctAnswer": "A stack is a linear data structure that follows a particular order in which the operations are performed, a queue is a linear data structure that follows a particular order in which the operations are performed",
-        "quizId": "quiz5"
-    },
-    {
-        "text": "What is the purpose of the 'useLayoutEffect' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To handle side effects",
-        "quizId": "quiz5"
-    },
-    {
-        "text": "What is the purpose of the 'useDebugValue' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To manage props",
-        "quizId": "quiz5"
-    },
-    {
-        "text": "What is the difference between a class component and a functional component in React?",
-        "options": [
-            "A class component is a component that is defined as a class, a functional component is a component that is defined as a function",
-            "A class component is a component that is defined as a function, a functional component is a component that is defined as a class",
-            "A class component is a component that is defined as a function, a functional component is a component that is defined as a class",
-            "A class component is a component that is defined as a function, a functional component is a component that is defined as a class",
-            "A class component is a component that is defined as a function, a functional component is a component that is defined as a class"
-        ],
-        "correctAnswer": "A class component is a component that is defined as a class, a functional component is a component that is defined as a function",
-        "quizId": "quiz6"
-    },
-    {
-        "text": "What is the purpose of the 'useState' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To manage state in functional components",
-        "quizId": "quiz6"
-    },
-    {
-        "text": "What is the purpose of the 'useEffect' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To handle side effects",
-        "quizId": "quiz6"
-    },
-    {
-        "text": "What is the purpose of the 'useContext' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To create context",
-        "quizId": "quiz6"
-    },
-    {
-        "text": "What is the purpose of the 'useReducer' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To manage state in functional components",
-        "quizId": "quiz6"
-    },
-    {
-        "text": "What is the purpose of the 'useRef' hook in React?",
-        "options": [
-            "To manage state in functional components",
-            "To handle side effects",
-            "To create context",
-            "To manage props",
-            "To handle events"
-        ],
-        "correctAnswer": "To manage props",
-        "quizId": "quiz6"
-    }
+  {
+    "text": "What is the basic syntax for a 'for' loop in JavaScript?",
+    "options": [
+      "for (let i = 0; i < 10; i++)",
+      "for i = 0 to 10",
+      "for (i = 0; i <= 10; i++)",
+      "for (i = 0; i < 10; i++)",
+      "for (i = 0; i <= 10; i++)"
+    ],
+    "correctAnswer": "for (let i = 0; i < 10; i++)",
+    "quizId": "quiz1"
+  },
+  {
+    "text": "What is the time complexity of a binary search algorithm?",
+    "options": ["O(n)", "O(log n)", "O(n log n)", "O(n^2)", "O(n^3)"],
+    "correctAnswer": "O(log n)",
+    "quizId": "quiz1"
+  },
+  {
+    "text": "What is the purpose of the 'useState' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To manage state in functional components",
+    "quizId": "quiz2"
+  },
+  {
+    "text": "What is the difference between '==' and '===' in JavaScript?",
+    "options": [
+      "'==' checks for value equality, '===' checks for type equality",
+      "'==' checks for type equality, '===' checks for value equality",
+      "'==' checks for reference equality, '===' checks for value equality",
+      "'==' checks for value equality, '===' checks for reference equality",
+      "'==' checks for reference equality, '===' checks for type equality"
+    ],
+    "correctAnswer": "'==' checks for value equality, '===' checks for type equality",
+    "quizId": "quiz2"
+  },
+  {
+    "text": "What is the purpose of the 'useEffect' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To handle side effects",
+    "quizId": "quiz2"
+  },
+  {
+    "text": "What is the difference between SQL and NoSQL databases?",
+    "options": [
+      "SQL databases are relational, NoSQL databases are non-relational",
+      "SQL databases are non-relational, NoSQL databases are relational",
+      "SQL databases are for web applications, NoSQL databases are for mobile applications",
+      "SQL databases are for mobile applications, NoSQL databases are for web applications",
+      "SQL databases are for databases, NoSQL databases are for spreadsheets"
+    ],
+    "correctAnswer": "SQL databases are relational, NoSQL databases are non-relational",
+    "quizId": "quiz3"
+  },
+  {
+    "text": "What is the purpose of the 'useContext' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To create context",
+    "quizId": "quiz3"
+  },
+  {
+    "text": "What is the purpose of the 'useReducer' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To manage state in functional components",
+    "quizId": "quiz3"
+  },
+  {
+    "text": "What is the purpose of the 'useRef' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To manage props",
+    "quizId": "quiz3"
+  },
+  {
+    "text": "What is the difference between a process and a thread?",
+    "options": [
+      "A process is a single instance of a running program, a thread is a part of a process",
+      "A process is a part of a program, a thread is a single instance of a running program",
+      "A process is a single instance of a running program, a thread is a part of a process",
+      "A process is a part of a program, a thread is a single instance of a running program",
+      "A process is a single instance of a running program, a thread is a part of a process"
+    ],
+    "correctAnswer": "A process is a single instance of a running program, a thread is a part of a process",
+    "quizId": "quiz4"
+  },
+  {
+    "text": "What is the purpose of the 'useMemo' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To manage props",
+    "quizId": "quiz4"
+  },
+  {
+    "text": "What is the purpose of the 'useCallback' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To manage props",
+    "quizId": "quiz4"
+  },
+  {
+    "text": "What is the purpose of the 'useImperativeHandle' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To manage props",
+    "quizId": "quiz4"
+  },
+  {
+    "text": "What is the difference between a stack and a queue?",
+    "options": [
+      "A stack is a linear data structure that follows a particular order in which the operations are performed, a queue is a linear data structure that follows a particular order in which the operations are performed",
+      "A stack is a linear data structure that follows a particular order in which the operations are performed, a queue is a linear data structure that follows a particular order in which the operations are performed",
+      "A stack is a linear data structure that follows a particular order in which the operations are performed, a queue is a linear data structure that follows a particular order in which the operations are performed",
+      "A stack is a linear data structure that follows a particular order in which the operations are performed, a queue is a linear data structure that follows a particular order in which the operations are performed",
+      "A stack is a linear data structure that follows a particular order in which the operations are performed, a queue is a linear data structure that follows a particular order in which the operations are performed"
+    ],
+    "correctAnswer": "A stack is a linear data structure that follows a particular order in which the operations are performed, a queue is a linear data structure that follows a particular order in which the operations are performed",
+    "quizId": "quiz5"
+  },
+  {
+    "text": "What is the purpose of the 'useLayoutEffect' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To handle side effects",
+    "quizId": "quiz5"
+  },
+  {
+    "text": "What is the purpose of the 'useDebugValue' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To manage props",
+    "quizId": "quiz5"
+  },
+  {
+    "text": "What is the difference between a class component and a functional component in React?",
+    "options": [
+      "A class component is a component that is defined as a class, a functional component is a component that is defined as a function",
+      "A class component is a component that is defined as a function, a functional component is a component that is defined as a class",
+      "A class component is a component that is defined as a function, a functional component is a component that is defined as a class",
+      "A class component is a component that is defined as a function, a functional component is a component that is defined as a class",
+      "A class component is a component that is defined as a function, a functional component is a component that is defined as a class"
+    ],
+    "correctAnswer": "A class component is a component that is defined as a class, a functional component is a component that is defined as a function",
+    "quizId": "quiz6"
+  },
+  {
+    "text": "What is the purpose of the 'useState' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To manage state in functional components",
+    "quizId": "quiz6"
+  },
+  {
+    "text": "What is the purpose of the 'useEffect' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To handle side effects",
+    "quizId": "quiz6"
+  },
+  {
+    "text": "What is the purpose of the 'useContext' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To create context",
+    "quizId": "quiz6"
+  },
+  {
+    "text": "What is the purpose of the 'useReducer' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To manage state in functional components",
+    "quizId": "quiz6"
+  },
+  {
+    "text": "What is the purpose of the 'useRef' hook in React?",
+    "options": [
+      "To manage state in functional components",
+      "To handle side effects",
+      "To create context",
+      "To manage props",
+      "To handle events"
+    ],
+    "correctAnswer": "To manage props",
+    "quizId": "quiz6"
+  }
 ]

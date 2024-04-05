@@ -1,72 +1,72 @@
 [
-    {
-        "name": "Introduction to Programming",
-        "description": "A comprehensive quiz covering the basics of programming languages and concepts.",
-        "startTime": "2023-04-15T10:00:00.000Z",
-        "duration": 60,
-        "password": "quiz123"
-    },
-    {
-        "name": "Data Structures and Algorithms",
-        "description": "Test your knowledge on data structures and algorithms with this quiz.",
-        "startTime": "2023-04-22T14:00:00.000Z",
-        "duration": 90,
-        "password": "dsalgo456"
-    },
-    {
-        "name": "Web Development Basics",
-        "description": "Get started with web development by answering questions on HTML, CSS, and JavaScript.",
-        "startTime": "2023-04-29T16:00:00.000Z",
-        "duration": 75,
-        "password": "webdev789"
-    },
-    {
-        "name": "Database Management",
-        "description": "Learn about SQL and NoSQL databases with this quiz.",
-        "startTime": "2023-05-06T10:00:00.000Z",
-        "duration": 60,
-        "password": "dbman101"
-    },
-    {
-        "name": "Software Engineering Principles",
-        "description": "Understand the fundamentals of software engineering with this quiz.",
-        "startTime": "2023-05-13T14:00:00.000Z",
-        "duration": 90,
-        "password": "softeng11"
-    },
-    {
-        "name": "Operating Systems",
-        "description": "Test your knowledge on operating systems with this quiz.",
-        "startTime": "2023-05-20T16:00:00.000Z",
-        "duration": 75,
-        "password": "os1234"
-    },
-    {
-        "name": "Networking Fundamentals",
-        "description": "Get started with networking concepts with this quiz.",
-        "startTime": "2023-05-27T10:00:00.000Z",
-        "duration": 60,
-        "password": "netfund1"
-    },
-    {
-        "name": "Cybersecurity Basics",
-        "description": "Learn about the basics of cybersecurity with this quiz.",
-        "startTime": "2023-06-03T14:00:00.000Z",
-        "duration": 90,
-        "password": "cybersec1"
-    },
-    {
-        "name": "Artificial Intelligence",
-        "description": "Test your knowledge on artificial intelligence with this quiz.",
-        "startTime": "2023-06-10T16:00:00.000Z",
-        "duration": 75,
-        "password": "ai12345"
-    },
-    {
-        "name": "Machine Learning",
-        "description": "Get started with machine learning concepts with this quiz.",
-        "startTime": "2023-06-17T10:00:00.000Z",
-        "duration": 60,
-        "password": "ml123456"
-    }
+  {
+    "name": "Introduction to Programming",
+    "description": "A comprehensive quiz covering the basics of programming languages and concepts.",
+    "startTime": "2023-04-15T10:00:00.000Z",
+    "duration": 60,
+    "password": "quiz123"
+  },
+  {
+    "name": "Data Structures and Algorithms",
+    "description": "Test your knowledge on data structures and algorithms with this quiz.",
+    "startTime": "2023-04-22T14:00:00.000Z",
+    "duration": 90,
+    "password": "dsalgo456"
+  },
+  {
+    "name": "Web Development Basics",
+    "description": "Get started with web development by answering questions on HTML, CSS, and JavaScript.",
+    "startTime": "2023-04-29T16:00:00.000Z",
+    "duration": 75,
+    "password": "webdev789"
+  },
+  {
+    "name": "Database Management",
+    "description": "Learn about SQL and NoSQL databases with this quiz.",
+    "startTime": "2023-05-06T10:00:00.000Z",
+    "duration": 60,
+    "password": "dbman101"
+  },
+  {
+    "name": "Software Engineering Principles",
+    "description": "Understand the fundamentals of software engineering with this quiz.",
+    "startTime": "2023-05-13T14:00:00.000Z",
+    "duration": 90,
+    "password": "softeng11"
+  },
+  {
+    "name": "Operating Systems",
+    "description": "Test your knowledge on operating systems with this quiz.",
+    "startTime": "2023-05-20T16:00:00.000Z",
+    "duration": 75,
+    "password": "os1234"
+  },
+  {
+    "name": "Networking Fundamentals",
+    "description": "Get started with networking concepts with this quiz.",
+    "startTime": "2023-05-27T10:00:00.000Z",
+    "duration": 60,
+    "password": "netfund1"
+  },
+  {
+    "name": "Cybersecurity Basics",
+    "description": "Learn about the basics of cybersecurity with this quiz.",
+    "startTime": "2023-06-03T14:00:00.000Z",
+    "duration": 90,
+    "password": "cybersec1"
+  },
+  {
+    "name": "Artificial Intelligence",
+    "description": "Test your knowledge on artificial intelligence with this quiz.",
+    "startTime": "2023-06-10T16:00:00.000Z",
+    "duration": 75,
+    "password": "ai12345"
+  },
+  {
+    "name": "Machine Learning",
+    "description": "Get started with machine learning concepts with this quiz.",
+    "startTime": "2023-06-17T10:00:00.000Z",
+    "duration": 60,
+    "password": "ml123456"
+  }
 ]

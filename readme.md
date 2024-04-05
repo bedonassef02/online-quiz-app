@@ -51,7 +51,7 @@ An online Quiz application built with Node.js, Express, MongoDB, and other techn
 - `config/`: Houses configuration files for setting up environment variables and database connections.
 - `answer/`: Within this directory, you'll find modules and logic dedicated to handling quiz answers. It houses the functionality required for users to respond to quiz questions, validate their answers, and submit them for evaluation.
 - `grade/`: Contains route handlers responsible for grading quiz submissions and managing user scores.
-- `question/`:  Includes MongoDB models defining the structure and behavior of quiz questions and Answers.
+- `question/`: Includes MongoDB models defining the structure and behavior of quiz questions and Answers.
 - `quiz/`: Holds application logic related to quiz creation, management, and taking, including controllers and services.
 - `utils/`: Houses custom middleware functions used throughout the application for tasks such as authentication, error handling, and request processing
 

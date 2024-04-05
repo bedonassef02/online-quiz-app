@@ -1,17 +1,20 @@
-const { query, param, body } = require("express-validator");
-const { handleValidationErrors } = require("../../../utils/middlewares/validation-utils.middleware");
-const { checkQuizPassword } = require("../helpers/checking/check-password.helper");
+const { query, param, body } = require('express-validator');
+const {
+  handleValidationErrors,
+} = require('../../../utils/middlewares/validation-utils.middleware');
+const {
+  checkQuizPassword,
+} = require('../helpers/checking/check-password.helper');
 
 const deleteQuestionValidator = [
- param("id")
-    .isMongoId()
-    .withMessage("quizId must be a valid Mongo ID"),
+  param('id').isMongoId().withMessage('quizId must be a valid Mongo ID'),
 
- body("password")
-    .notEmpty().withMessage("quiz password is required")
+  body('password')
+    .notEmpty()
+    .withMessage('quiz password is required')
     .custom(checkQuizPassword),
 
- handleValidationErrors,
+  handleValidationErrors,
 ];
 
 module.exports = deleteQuestionValidator;

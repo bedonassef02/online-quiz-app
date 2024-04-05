@@ -1,27 +1,31 @@
-const { body } = require("express-validator");
-const { handleValidationErrors } = require("../../../utils/middlewares/validation-utils.middleware");
+const { body } = require('express-validator');
+const {
+  handleValidationErrors,
+} = require('../../../utils/middlewares/validation-utils.middleware');
 const {
   checkIfQuizExists,
-} = require("../../../answer/utils/helpers/checking/is-active.helper");
+} = require('../../../answer/utils/helpers/checking/is-active.helper');
 const {
   checkIfQuizIsNotActive,
-} = require("../helpers/checking/is-not-active.helper");
-const { checkIfGradeExists } = require("../helpers/checking/is-exists.helper");
-const { checkQuizPassword } = require("../../../quiz/utils/helpers/checking/check-password.helper");
+} = require('../helpers/checking/is-not-active.helper');
+const { checkIfGradeExists } = require('../helpers/checking/is-exists.helper');
+const {
+  checkQuizPassword,
+} = require('../../../quiz/utils/helpers/checking/check-password.helper');
 
 const calculateGradenValidator = [
-  
-  body("quizId")
+  body('quizId')
     .notEmpty()
-    .withMessage("quizId is required")
+    .withMessage('quizId is required')
     .isMongoId()
-    .withMessage("quizId must be a valid Mongo ID")
+    .withMessage('quizId must be a valid Mongo ID')
     .custom(checkIfQuizExists)
     .custom(checkIfQuizIsNotActive)
     .custom(checkIfGradeExists),
 
-    body('password')
-    .notEmpty().withMessage('password is required')
+  body('password')
+    .notEmpty()
+    .withMessage('password is required')
     .custom(checkQuizPassword),
 
   handleValidationErrors,
