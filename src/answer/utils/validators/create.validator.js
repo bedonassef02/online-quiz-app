@@ -12,9 +12,6 @@ const {
   checkIfQuizIsActive,
   checkIfQuizExists,
 } = require('../helpers/checking/is-active.helper');
-const {
-  hasUserAnsweredQuiz,
-} = require('../helpers/checking/has-answered.hlper');
 
 const handleAnswerValidator = [
   body('quizId')

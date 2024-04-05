@@ -12,6 +12,7 @@ const insertQuizDataIntoDatabase = async () => {
 
     // Insert each quiz entry into the database
     for (const quizEntry of quizEntries) {
+      quizEntry.userId = '660fb1afadae9dbf60fce247';
       const quiz = await quizService.create(quizEntry);
       ids.push(quiz.id);
     }

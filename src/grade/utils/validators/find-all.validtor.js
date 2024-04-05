@@ -5,9 +5,6 @@ const {
 const {
   checkIfQuizExists,
 } = require('../../../answer/utils/helpers/checking/is-active.helper');
-const {
-  checkQuizQueryPassword,
-} = require('../../../quiz/utils/helpers/checking/check-password.helper');
 
 const findAllGradesValidator = [
   query('quizId')
