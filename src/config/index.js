@@ -3,9 +3,7 @@ const Joi = require('joi');
 const envVarsSchema = Joi.object({
   PORT: Joi.number().integer().min(1).max(65535).default(3000),
 
-  NODE_ENV: Joi.string()
-    .valid('development', 'production', 'test')
-    .default('development'),
+  NODE_ENV: Joi.string().valid('development', 'production', 'test').default('development'),
 
   DATABASE_URI: Joi.string().uri().required(),
 

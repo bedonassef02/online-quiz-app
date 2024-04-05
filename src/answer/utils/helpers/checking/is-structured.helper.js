@@ -2,9 +2,7 @@
 const isStructuredHelper = (value) => {
   for (const answer of value) {
     if (!answer.questionId || !answer.userAnswer) {
-      throw new Error(
-        'Each questionAnswer must contain a questionId and userAnswer'
-      );
+      throw new Error('Each questionAnswer must contain a questionId and userAnswer');
     }
   }
   return true;

@@ -1,6 +1,4 @@
-const {
-  calculateTimeDifference,
-} = require('../calculation/time-difference.helper');
+const { calculateTimeDifference } = require('../calculation/time-difference.helper');
 
 function responseHelper(req, res, quiz) {
   if (!quiz) {
@@ -14,17 +12,13 @@ function responseHelper(req, res, quiz) {
       // Quiz will start after some time
       const timeDifference = startTime - now;
       res.status(200).json({
-        message: `The quiz will start in ${calculateTimeDifference(
-          timeDifference
-        )}.`,
+        message: `The quiz will start in ${calculateTimeDifference(timeDifference)}.`,
       });
     } else if (now > endTime) {
       // Quiz has finished
       const timeDifference = now - endTime;
       res.status(200).json({
-        message: `The quiz finished ${calculateTimeDifference(
-          timeDifference
-        )} ago.`,
+        message: `The quiz finished ${calculateTimeDifference(timeDifference)} ago.`,
       });
     } else {
       // Quiz is active now

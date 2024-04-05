@@ -1,10 +1,6 @@
 const { param } = require('express-validator');
-const {
-  handleValidationErrors,
-} = require('../../../utils/middlewares/validation-utils.middleware');
-const {
-  checkIfQuizExists,
-} = require('../../../answer/utils/helpers/checking/is-active.helper');
+const { handleValidationErrors } = require('../../../utils/middlewares/validation-utils.middleware');
+const { checkIfQuizExists } = require('../../../answer/utils/helpers/checking/is-active.helper');
 
 const findOneValidator = [
   param('quizId')

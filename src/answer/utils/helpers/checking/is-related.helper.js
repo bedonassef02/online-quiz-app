@@ -9,9 +9,7 @@ const isRelatedHelper = async (value, { req }) => {
       throw new Error(`Question with ID ${answer.questionId} not found`);
     }
     if (question.quizId.toString() !== quizId) {
-      throw new Error(
-        `Question with ID ${answer.questionId} not related to the quiz`
-      );
+      throw new Error(`Question with ID ${answer.questionId} not related to the quiz`);
     }
   }
   return true;

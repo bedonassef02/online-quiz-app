@@ -1,13 +1,7 @@
 const { body } = require('express-validator');
-const {
-  handleValidationErrors,
-} = require('../../../utils/middlewares/validation-utils.middleware');
-const {
-  checkIfQuizExists,
-} = require('../../../answer/utils/helpers/checking/is-active.helper');
-const {
-  checkIfQuizIsNotActive,
-} = require('../helpers/checking/is-not-active.helper');
+const { handleValidationErrors } = require('../../../utils/middlewares/validation-utils.middleware');
+const { checkIfQuizExists } = require('../../../answer/utils/helpers/checking/is-active.helper');
+const { checkIfQuizIsNotActive } = require('../helpers/checking/is-not-active.helper');
 const { checkIfGradeExists } = require('../helpers/checking/is-exists.helper');
 
 const calculateGradenValidator = [

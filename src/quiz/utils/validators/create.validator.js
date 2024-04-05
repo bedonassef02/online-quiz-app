@@ -1,7 +1,5 @@
 const { body } = require('express-validator');
-const {
-  handleValidationErrors,
-} = require('../../../utils/middlewares/validation-utils.middleware');
+const { handleValidationErrors } = require('../../../utils/middlewares/validation-utils.middleware');
 
 const createQuizValidator = [
   body('name')

@@ -1,7 +1,5 @@
 const { param } = require('express-validator');
-const {
-  handleValidationErrors,
-} = require('../../../utils/middlewares/validation-utils.middleware');
+const { handleValidationErrors } = require('../../../utils/middlewares/validation-utils.middleware');
 
 const deleteQuestionValidator = [
   param('id').isMongoId().withMessage('quizId must be a valid Mongo ID'),

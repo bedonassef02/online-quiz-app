@@ -1,17 +1,8 @@
 const { body } = require('express-validator');
-const {
-  handleValidationErrors,
-} = require('../../../utils/middlewares/validation-utils.middleware');
-const {
-  validateQuestionAnswerStructure,
-} = require('../helpers/checking/is-structured.helper');
-const {
-  validateQuestionRelationToQuiz,
-} = require('../helpers/checking/is-related.helper');
-const {
-  checkIfQuizIsActive,
-  checkIfQuizExists,
-} = require('../helpers/checking/is-active.helper');
+const { handleValidationErrors } = require('../../../utils/middlewares/validation-utils.middleware');
+const { validateQuestionAnswerStructure } = require('../helpers/checking/is-structured.helper');
+const { validateQuestionRelationToQuiz } = require('../helpers/checking/is-related.helper');
+const { checkIfQuizIsActive, checkIfQuizExists } = require('../helpers/checking/is-active.helper');
 
 const handleAnswerValidator = [
   body('quizId')

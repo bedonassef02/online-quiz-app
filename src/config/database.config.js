@@ -3,9 +3,7 @@ const mongoose = require('mongoose');
 const connectToDatabase = async () => {
   const DATABASE_URI = process.env.DATABASE_URI;
   if (!DATABASE_URI) {
-    throw new Error(
-      'DATABASE_URI is not defined in the environment variables.'
-    );
+    throw new Error('DATABASE_URI is not defined in the environment variables.');
   }
   try {
     // Removed deprecated options

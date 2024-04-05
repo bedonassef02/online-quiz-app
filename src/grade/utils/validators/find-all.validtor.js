@@ -1,10 +1,6 @@
 const { query } = require('express-validator');
-const {
-  handleValidationErrors,
-} = require('../../../utils/middlewares/validation-utils.middleware');
-const {
-  checkIfQuizExists,
-} = require('../../../answer/utils/helpers/checking/is-active.helper');
+const { handleValidationErrors } = require('../../../utils/middlewares/validation-utils.middleware');
+const { checkIfQuizExists } = require('../../../answer/utils/helpers/checking/is-active.helper');
 
 const findAllGradesValidator = [
   query('quizId')

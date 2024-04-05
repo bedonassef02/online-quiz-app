@@ -15,9 +15,7 @@ const isAuthToDelete = async (req, res, next) => {
     const quiz = await quizService.findOne(question.quizId);
 
     if (!quiz || quiz.userId.toJSON() !== userId) {
-      return res
-        .status(401)
-        .json({ message: 'You are not the owner of this quiz' });
+      return res.status(401).json({ message: 'You are not the owner of this quiz' });
     }
 
     next();
@@ -25,9 +23,7 @@ const isAuthToDelete = async (req, res, next) => {
     // Log the error for debugging purposes
     console.error(error);
     // Send a generic error response
-    res
-      .status(500)
-      .json({ message: 'An error occurred while processing your request' });
+    res.status(500).json({ message: 'An error occurred while processing your request' });
   }
 };
 

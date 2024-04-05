@@ -1,7 +1,5 @@
 const { body } = require('express-validator');
-const {
-  handleValidationErrors,
-} = require('../../../utils/middlewares/validation-utils.middleware');
+const { handleValidationErrors } = require('../../../utils/middlewares/validation-utils.middleware');
 const usersService = require('../../user.service');
 
 exports.validateUserRegistration = [
@@ -20,9 +18,7 @@ exports.validateUserRegistration = [
     }),
 
   // Validate password
-  body('password')
-    .isLength({ min: 6 })
-    .withMessage('Password must be at least 6 characters long'),
+  body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long'),
 
   handleValidationErrors,
 ];
