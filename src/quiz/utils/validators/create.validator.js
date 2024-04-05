@@ -27,13 +27,7 @@ const createQuizValidator = [
     .withMessage('duration is required')
     .isInt({ min: 1 })
     .withMessage('duration must be an integer greater than 0'),
-
-  body('password')
-    .notEmpty()
-    .withMessage('password is required')
-    .isLength({ min: 8 })
-    .withMessage('password must be at least 8 characters long'),
-
+    
   handleValidationErrors,
 ];
 

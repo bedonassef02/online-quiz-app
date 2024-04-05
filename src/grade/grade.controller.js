@@ -13,9 +13,8 @@ exports.findAll = async (req, res) => {
 
 exports.findOne = async (req, res) => {
   const { quizId } = req.params;
-  const { userId } = req.query;
+  const { userId } = req.user.id;
   const grade = await gradeService.findOne({ quizId, userId });
-  console.log(grade);
   if (grade) {
     res.status(200).json(grade);
   } else {

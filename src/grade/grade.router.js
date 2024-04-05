@@ -8,6 +8,11 @@ const {
 const {
   findOneGradeValidator,
 } = require('./utils/validators/find-one.validator');
+const {
+  isAuthMiddleware,
+} = require('../utils/middlewares/auth/is-auth.middleware');
+
+router.use(isAuthMiddleware);
 
 router.post('/', calculateGradeValidation, gradeController.calculateQuizGrades);
 router.get('/', findAllGradesValidator, gradeController.findAll);

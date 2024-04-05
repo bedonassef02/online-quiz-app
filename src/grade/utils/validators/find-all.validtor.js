@@ -17,11 +17,6 @@ const findAllGradesValidator = [
     .withMessage('quizId must be a valid Mongo ID')
     .custom(checkIfQuizExists),
 
-  query('password')
-    .notEmpty()
-    .withMessage('password is required')
-    .custom(checkQuizQueryPassword),
-
   handleValidationErrors,
 ];
 

@@ -9,9 +9,6 @@ const {
   checkIfQuizIsNotActive,
 } = require('../helpers/checking/is-not-active.helper');
 const { checkIfGradeExists } = require('../helpers/checking/is-exists.helper');
-const {
-  checkQuizPassword,
-} = require('../../../quiz/utils/helpers/checking/check-password.helper');
 
 const calculateGradenValidator = [
   body('quizId')
@@ -22,11 +19,6 @@ const calculateGradenValidator = [
     .custom(checkIfQuizExists)
     .custom(checkIfQuizIsNotActive)
     .custom(checkIfGradeExists),
-
-  body('password')
-    .notEmpty()
-    .withMessage('password is required')
-    .custom(checkQuizPassword),
 
   handleValidationErrors,
 ];

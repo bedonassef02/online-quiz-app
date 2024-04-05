@@ -17,12 +17,6 @@ const {
 } = require('../helpers/checking/has-answered.hlper');
 
 const handleAnswerValidator = [
-  body('userId')
-    .notEmpty()
-    .withMessage('userId is required')
-    .isNumeric()
-    .withMessage('userId must be a number')
-    .custom(hasUserAnsweredQuiz),
 
   body('quizId')
     .notEmpty()

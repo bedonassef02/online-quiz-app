@@ -5,20 +5,8 @@ const {
   cacheQuizActiveStatus,
 } = require('./utils/helpers/caching/is-active.helper');
 
-exports.create = async ({
-  name,
-  description,
-  startTime,
-  duration,
-  password,
-}) => {
-  return await Quiz.create({
-    name,
-    description,
-    startTime,
-    duration,
-    password,
-  });
+exports.create = async (quiz) => {
+  return await Quiz.create({...quiz});
 };
 
 exports.findOne = (id) => {

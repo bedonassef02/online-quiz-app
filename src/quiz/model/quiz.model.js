@@ -23,12 +23,11 @@ const quizSchema = new mongoose.Schema(
       min: 1,
       required: true,
     },
-    password: {
-      type: String,
-      required: true,
-      maxLength: 16,
-      minLength: 4,
-    },
+    userId:{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true
+    }
   },
   {
     timestamps: true,

@@ -1,4 +1,4 @@
-const { query, param } = require('express-validator');
+const { param } = require('express-validator');
 const {
   handleValidationErrors,
 } = require('../../../utils/middlewares/validation-utils.middleware');
@@ -13,12 +13,6 @@ const findOneValidator = [
     .isMongoId()
     .withMessage('quizId must be a valid Mongo ID')
     .custom(checkIfQuizExists),
-
-  query('userId')
-    .notEmpty()
-    .withMessage('userId is required')
-    .isNumeric()
-    .withMessage('userId must be a valid number'),
 
   handleValidationErrors,
 ];
