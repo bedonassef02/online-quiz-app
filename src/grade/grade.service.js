@@ -20,3 +20,7 @@ exports.calculateQuizGrades = async (quizId) => {
 exports.findAll = async (quizId) => {
   return await QuizGrade.find({ quizId }).select("userId grade");
 };
+
+exports.findOne = async ({ quizId, userId }) => {
+  return await QuizGrade.findOne({ quizId, userId });
+};
