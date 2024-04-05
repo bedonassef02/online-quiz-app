@@ -1,3 +1,4 @@
+const { HttpStatus } = require('../utils/constants/http-status');
 const answersService = require('./answer.service');
 exports.create = async (req, res) => {
   const { questionAnswers, quizId } = req.body;
@@ -7,5 +8,5 @@ exports.create = async (req, res) => {
     questionAnswers,
     quizId,
   });
-  res.status(201).json(answer);
+  res.status(HttpStatus.CREATED).json(answer);
 };

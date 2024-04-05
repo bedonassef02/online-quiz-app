@@ -1,8 +1,9 @@
+const { HttpStatus } = require('../../constants/http-status');
 const tokenService = require('../../helpers/verify-token.helper');
 const isAuthMiddleware = (req, res, next) => {
   const token = req.headers.authorization?.split(' ')[1];
   if (!token) {
-    res.status(401).json({ message: 'Token is required' });
+    res.status(HttpStatus.BAD_REQUEST).json({ message: 'Token is required' });
     return;
   }
   try {
@@ -10,7 +11,7 @@ const isAuthMiddleware = (req, res, next) => {
     req.user = user;
     next();
   } catch (err) {
-    res.status(401).json({ message: 'Invalid token' });
+    res.status(HttpStatus.UNAUTHORIZED).json({ message: 'Invalid token' });
   }
 };
 
