@@ -1,6 +1,6 @@
 const QuizGrade = require("../../model/grade.model");
 
-const saveQuizGrade = async (quizId, averageGrade, userId) => {
+const saveQuizGradeHelper = async (quizId, averageGrade, userId) => {
   const quizGrade = new QuizGrade({
     quizId,
     grade: averageGrade,
@@ -9,4 +9,4 @@ const saveQuizGrade = async (quizId, averageGrade, userId) => {
   await quizGrade.save();
 };
 
-module.exports = { saveQuizGrade };
+module.exports = { saveQuizGrade: saveQuizGradeHelper };

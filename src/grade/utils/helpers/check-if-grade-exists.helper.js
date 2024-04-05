@@ -1,6 +1,6 @@
 const QuizGrade = require("../../model/grade.model");
 
-const checkIfGradeExists = async (quizId) => {
+const checkIfGradeExistsHelper = async (quizId) => {
   const existingGrade = await QuizGrade.findOne({ quizId });
   if (existingGrade) {
     throw new Error(
@@ -9,4 +9,4 @@ const checkIfGradeExists = async (quizId) => {
   }
   return true;
 }
-module.exports = { checkIfGradeExists };
+module.exports = { checkIfGradeExists: checkIfGradeExistsHelper };

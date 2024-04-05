@@ -1,6 +1,6 @@
-const { calculateTimeDifference } = require("./calculateTimeDifference");
+const { calculateTimeDifference } = require("./calculate-time-difference.helper");
 
-function handleQuizResponse(req, res, quiz) {
+function handleQuizResponseHelper(req, res, quiz) {
   if (!quiz) {
     res.status(404).json({ message: `No quiz found for id ${req.params.id}` });
   } else {
@@ -49,4 +49,4 @@ function handleDeleteQuizResponse(req, res, quiz) {
   }
 }
 
-module.exports = { handleQuizResponse, handleDeleteQuizResponse };
+module.exports = { handleQuizResponse: handleQuizResponseHelper, handleDeleteQuizResponse };

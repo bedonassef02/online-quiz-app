@@ -1,8 +1,8 @@
 const { body } = require("express-validator");
-const { handleValidationErrors } = require("../../../utils/validation-utils");
+const { handleValidationErrors } = require("../../../utils/middlewares/validation-utils.middleware");
 const quizService = require("../../../quiz/quiz.service");
-const { checkIfQuizExists } = require("../../../answer/utils/helpers/validationQuizActivation");
-const { checkIfQuizIsNotActive } = require("../../../grade/utils/helpers/checkIfQuiczIsNotActive");
+const { checkIfQuizExists } = require("../../../answer/utils/helpers/validation-quiz-activation.helper");
+const { checkIfQuizIsNotActive } = require("../../../grade/utils/helpers/check-if-quicz-is-not-active.helper");
 
 const createQuestionValidator = [
   body("text")

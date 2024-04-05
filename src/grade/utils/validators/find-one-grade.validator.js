@@ -1,8 +1,8 @@
 const { query, param } = require("express-validator");
-const { handleValidationErrors } = require("../../../utils/validation-utils");
+const { handleValidationErrors } = require("../../../utils/middlewares/validation-utils.middleware");
 const {
   checkIfQuizExists,
-} = require("../../../answer/utils/helpers/validationQuizActivation");
+} = require("../../../answer/utils/helpers/validation-quiz-activation.helper");
 
 const findOneGradeValidator = [
   param("quizId")

@@ -1,6 +1,6 @@
 const Question = require("../../../question/model/question.model");
 
-const calculateScoreForAnswer = async (answer) => {
+const calculateScoreForAnswerHelper = async (answer) => {
   let score = 0;
   for (const questionAnswer of answer.questionAnswers) {
     const question = await Question.findById(questionAnswer.questionId);
@@ -25,4 +25,4 @@ function groupAnswersByUserId(answers) {
      return acc;
   }, {});
  }
-module.exports = { calculateScoreForAnswer, calculateAverageGrade, groupAnswersByUserId };
+module.exports = { calculateScoreForAnswer: calculateScoreForAnswerHelper, calculateAverageGrade, groupAnswersByUserId };

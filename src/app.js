@@ -1,7 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
-const { NotFoundException } = require('./utils/not-found.middleware');
-const { HandleException } = require('./utils/catch-errors.middleware');
+const { NotFoundException } = require('./utils/middlewares/not-found.middleware');
+const { HandleException } = require('./utils/middlewares/catch-errors.middleware');
 const { seedDatabase } = require('./utils/db-seed');
 
 const setupExpressApp = () => {

@@ -1,6 +1,6 @@
 const { param, body } = require('express-validator');
-const { handleValidationErrors } = require('../../../utils/validation-utils');
-const { checkQuizPassword } = require('../helpers/checkQuizPassword');
+const { handleValidationErrors } = require('../../../utils/middlewares/validation-utils.middleware');
+const { checkQuizPassword } = require('../helpers/check-quiz-password.helper');
 
 const deleteQuizValidator = [
 

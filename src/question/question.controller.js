@@ -1,6 +1,6 @@
 const asyncHandler = require('express-async-handler');
 const questionService = require('./question.service');
-const { extractQuestionData } = require('./utils/helpers/extractQuestionData');
+const { extractQuestionData } = require('./utils/helpers/extract-question-data.helper');
 
 exports.create = asyncHandler(async (req, res) => {
     const questionData = extractQuestionData(req);

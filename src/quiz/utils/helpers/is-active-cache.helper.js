@@ -1,5 +1,5 @@
 const { redis } = require("../../../config/redis.config");
-const calculateTime = require('./calculateTime');
+const calculateTime = require('./calculate-time.helper');
 const Quiz = require('../../model/quiz.model');
 
 async function getQuizActiveStatusFromCache(id) {

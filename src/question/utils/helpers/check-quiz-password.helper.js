@@ -1,7 +1,7 @@
 const questionService = require("../../question.service");
 const quizService = require("../../../quiz/quiz.service");
 
-const checkQuizPassword = async (password, { req }) => {
+const checkQuizPasswordHelper = async (password, { req }) => {
   const { id } = req.params;
   const question = await questionService.findOne(id);
   if (!question) {
@@ -17,4 +17,4 @@ const checkQuizPassword = async (password, { req }) => {
   return true;
 };
 
-module.exports = {checkQuizPassword};
+module.exports = {checkQuizPassword: checkQuizPasswordHelper};

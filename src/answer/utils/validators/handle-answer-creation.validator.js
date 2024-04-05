@@ -1,16 +1,16 @@
 const { body } = require("express-validator");
-const { handleValidationErrors } = require("../../../utils/validation-utils");
+const { handleValidationErrors } = require("../../../utils/middlewares/validation-utils.middleware");
 const {
   validateQuestionAnswerStructure,
-} = require("../helpers/validateQuestionAnswerStructure");
+} = require("../helpers/validate-question-answer-structure.helper");
 const {
   validateQuestionRelationToQuiz,
-} = require("../helpers/validateQuestionRelationToQuiz");
+} = require("../helpers/validate-question-relation-to-quiz.helper");
 const {
   checkIfQuizIsActive,
   checkIfQuizExists,
-} = require("../helpers/validationQuizActivation");
-const { hasUserAnsweredQuiz } = require("../helpers/is-user-answered-quiz");
+} = require("../helpers/validation-quiz-activation.helper");
+const { hasUserAnsweredQuiz } = require("../helpers/is-user-answered-quiz.hlper");
 
 const handleAnswerValidator = [
   body("userId")

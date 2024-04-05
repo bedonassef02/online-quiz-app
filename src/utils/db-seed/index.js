@@ -1,19 +1,19 @@
 const {
-  insertQuestionsForQuizzes,
-} = require("../../question/utils/db-seed/insertQuestions");
+    insertQuestionsForQuizzes,
+} = require("../../question/utils/db-seed/insert-questions");
 const {
-  insertQuizDataIntoDatabase,
-} = require("../../quiz/utils/db-seed/insertQuizes");
+    insertQuizDataIntoDatabase,
+} = require("../../quiz/utils/db-seed/insert-quizes");
 
 const seedDatabase = async () => {
-  const isSeedEnabled = process.env.ENABLE_SEED == "true" ? true : false;
+    const isSeedEnabled = process.env.ENABLE_SEED === "true";
 
-  console.log(`Seeding is ${isSeedEnabled ? 'enabled' : 'disabled'}.`);
+    console.log(`Seeding is ${isSeedEnabled ? 'enabled' : 'disabled'}.`);
 
-  if (isSeedEnabled) {
-    const ids = await insertQuizDataIntoDatabase();
-    insertQuestionsForQuizzes(ids);
-  }
+    if (isSeedEnabled) {
+        const ids = await insertQuizDataIntoDatabase();
+        await insertQuestionsForQuizzes(ids);
+    }
 };
 
-module.exports = { seedDatabase };
+module.exports = {seedDatabase};

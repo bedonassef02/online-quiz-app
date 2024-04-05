@@ -1,5 +1,5 @@
 // Function to validate the structure of each questionAnswer
-const validateQuestionAnswerStructure = (value) => {
+const validateQuestionAnswerStructureHelper = (value) => {
     for (const answer of value) {
         if (!answer.questionId || !answer.userAnswer) {
             throw new Error('Each questionAnswer must contain a questionId and userAnswer');
@@ -8,4 +8,4 @@ const validateQuestionAnswerStructure = (value) => {
     return true;
 };
 
-module.exports = {validateQuestionAnswerStructure}
+module.exports = {validateQuestionAnswerStructure: validateQuestionAnswerStructureHelper}

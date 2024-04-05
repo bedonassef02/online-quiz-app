@@ -1,11 +1,11 @@
 const { query } = require("express-validator");
-const { handleValidationErrors } = require("../../../utils/validation-utils");
+const { handleValidationErrors } = require("../../../utils/middlewares/validation-utils.middleware");
 const {
   checkIfQuizExists,
-} = require("../../../answer/utils/helpers/validationQuizActivation");
+} = require("../../../answer/utils/helpers/validation-quiz-activation.helper");
 const {
   checkQuizQueryPassword,
-} = require("../../../quiz/utils/helpers/checkQuizPassword");
+} = require("../../../quiz/utils/helpers/check-quiz-password.helper");
 
 const findAllGradesValidator = [
   query("quizId")

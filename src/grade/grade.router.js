@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 const gradeController = require("./grade.controller");
-const calculateGradeValidation = require("./utils/validators/calculate-grade.validation");
+const calculateGradeValidation = require("./utils/validators/calculate-grade.validator");
 const {
   findAllGradesValidator,
 } = require("./utils/validators/find-all-grades.validtor");
