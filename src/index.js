@@ -4,7 +4,9 @@ const { handleGracefulShutdown } = require("./utils/handleGracefulShutdown");
 process.loadEnvFile('./.env')
 
 const startApp = async () => {
+  
   await connectToDatabase();
+
   const app = setupExpressApp();
 
   const port = process.env.PORT || 3000;
