@@ -4,6 +4,7 @@ const {
   handleGracefulShutdown,
 } = require('./utils/error-handling/graceful-shutdown');
 process.loadEnvFile('./.env');
+require('./config/index');
 
 const startApp = async () => {
   await connectToDatabase();

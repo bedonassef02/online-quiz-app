@@ -34,7 +34,13 @@ An online Quiz application built with Node.js, Express, MongoDB, and other techn
    ```env
    PORT=3000
    DATABASE_URI=your-mongodb-uri
+
    ENABLE_SEED=true -> To automatically insert some data into the database
+
+   NODE_ENV
+
+   JWT_SECRET=your-jwt-secret
+   JWT_EXPIRES_IN=your-jwt-exp
    ```
 
 4. Run the application:
