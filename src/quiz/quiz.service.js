@@ -6,7 +6,7 @@ const {
 } = require('./utils/helpers/caching/is-active.helper');
 
 exports.create = async (quiz) => {
-  return await Quiz.create({...quiz});
+  return await Quiz.create({ ...quiz });
 };
 
 exports.findOne = (id) => {

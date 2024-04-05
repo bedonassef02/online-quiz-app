@@ -4,7 +4,7 @@ const extractQuizData = (req) => ({
   description: req.body.description,
   startTime: req.body.startTime,
   duration: req.body.duration,
-  userId: req.user.id
+  userId: req.user.id,
 });
 
 module.exports = { extractQuizData };

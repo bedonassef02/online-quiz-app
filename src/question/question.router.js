@@ -13,7 +13,17 @@ const { isAuthToDelete } = require('./utils/middlewares/is-auth-to-delete');
 router.use(isAuthMiddleware);
 
 router.get('/', findAllQuestionValidator, questionController.findAll);
-router.post('/',createQuestionValidator,isQuestionOwner, questionController.create);
-router.delete('/:id',deleteQuestionValidator,isAuthToDelete, questionController.remove);
+router.post(
+  '/',
+  createQuestionValidator,
+  isQuestionOwner,
+  questionController.create
+);
+router.delete(
+  '/:id',
+  deleteQuestionValidator,
+  isAuthToDelete,
+  questionController.remove
+);
 
 module.exports = router;

@@ -23,11 +23,11 @@ const quizSchema = new mongoose.Schema(
       min: 1,
       required: true,
     },
-    userId:{
+    userId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
-      required: true
-    }
+      required: true,
+    },
   },
   {
     timestamps: true,

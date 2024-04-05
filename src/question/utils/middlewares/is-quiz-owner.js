@@ -1,10 +1,10 @@
 const quizService = require('../../../quiz/quiz.service');
 const isQuestionOwner = async (req, res, next) => {
   const { id } = req.user;
-  const {quizId} = req.body;
+  const { quizId } = req.body;
 
   const quiz = await quizService.findOne(quizId);
-  console.log({quiz, id})
+  console.log({ quiz, id });
   if (quiz.userId.toJSON() === id) {
     next();
   } else {
@@ -13,5 +13,5 @@ const isQuestionOwner = async (req, res, next) => {
 };
 
 module.exports = {
-    isQuestionOwner,
+  isQuestionOwner,
 };

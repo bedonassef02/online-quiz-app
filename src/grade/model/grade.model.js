@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const gradeSchema = new mongoose.Schema(
   {
     userId: {
-      type: Number,
+      type:mongoose.Schema.Types.ObjectId,
+      ref: 'User',
       required: true,
     },
     quizId: {

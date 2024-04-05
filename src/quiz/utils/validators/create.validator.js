@@ -27,7 +27,7 @@ const createQuizValidator = [
     .withMessage('duration is required')
     .isInt({ min: 1 })
     .withMessage('duration must be an integer greater than 0'),
-    
+
   handleValidationErrors,
 ];
 

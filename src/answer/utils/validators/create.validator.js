@@ -17,7 +17,6 @@ const {
 } = require('../helpers/checking/has-answered.hlper');
 
 const handleAnswerValidator = [
-
   body('quizId')
     .notEmpty()
     .withMessage('quizId is required')
