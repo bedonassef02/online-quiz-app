@@ -1,4 +1,4 @@
-const quizService = require("../../../quiz/quiz.service");
+const quizService = require("../../../../quiz/quiz.service");
 
 const checkIfQuizIsActive = async (quizId) => {
   const isActive = await quizService.isActive(quizId);

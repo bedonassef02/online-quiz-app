@@ -1,4 +1,4 @@
-const answersService = require("../../answer.service");
+const answersService = require("../../../answer.service");
 
 const hasUserAnsweredQuiz = async (userId, { req }) => {
   const { quizId } = req.body;

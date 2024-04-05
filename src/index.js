@@ -1,6 +1,6 @@
 const { connectToDatabase } = require("./config/database.config");
 const { setupExpressApp } = require("./app");
-const { handleGracefulShutdown } = require("./utils/error-handling/handle-graceful-shutdown");
+const { handleGracefulShutdown } = require("./utils/error-handling/graceful-shutdown");
 process.loadEnvFile('./.env')
 
 

@@ -2,9 +2,9 @@ const { query, param } = require("express-validator");
 const { handleValidationErrors } = require("../../../utils/middlewares/validation-utils.middleware");
 const {
   checkIfQuizExists,
-} = require("../../../answer/utils/helpers/validation-quiz-activation.helper");
+} = require("../../../answer/utils/helpers/checking/is-active.helper");
 
-const findOneGradeValidator = [
+const findOneValidator = [
   param("quizId")
     .notEmpty()
     .withMessage("quizId is required")
@@ -21,4 +21,4 @@ const findOneGradeValidator = [
   handleValidationErrors,
 ];
 
-module.exports = { findOneGradeValidator };
+module.exports = { findOneGradeValidator: findOneValidator };

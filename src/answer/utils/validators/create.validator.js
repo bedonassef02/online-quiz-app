@@ -2,15 +2,15 @@ const { body } = require("express-validator");
 const { handleValidationErrors } = require("../../../utils/middlewares/validation-utils.middleware");
 const {
   validateQuestionAnswerStructure,
-} = require("../helpers/validate-question-answer-structure.helper");
+} = require("../helpers/checking/is-structured.helper");
 const {
   validateQuestionRelationToQuiz,
-} = require("../helpers/validate-question-relation-to-quiz.helper");
+} = require("../helpers/checking/is-related.helper");
 const {
   checkIfQuizIsActive,
   checkIfQuizExists,
-} = require("../helpers/validation-quiz-activation.helper");
-const { hasUserAnsweredQuiz } = require("../helpers/is-user-answered-quiz.hlper");
+} = require("../helpers/checking/is-active.helper");
+const { hasUserAnsweredQuiz } = require("../helpers/checking/has-answered.hlper");
 
 const handleAnswerValidator = [
   body("userId")

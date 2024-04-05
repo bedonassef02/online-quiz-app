@@ -1,6 +1,6 @@
-const quizService = require("../../quiz.service");
+const quizService = require("../../../quiz.service");
 
-const checkQuizPasswordHelper = async (password, { req }) => {
+const checkPasswordHelper = async (password, { req }) => {
   const { id } = req.params;
   return handlePasswordCheck(id, password);
 };
@@ -18,4 +18,4 @@ const handlePasswordCheck = async (id, password) => {
   return true;
 };
 
-module.exports = { checkQuizPassword: checkQuizPasswordHelper, checkQuizQueryPassword };
+module.exports = { checkQuizPassword: checkPasswordHelper, checkQuizQueryPassword };

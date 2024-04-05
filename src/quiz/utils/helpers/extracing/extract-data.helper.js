@@ -1,5 +1,5 @@
 // Helper function to extract quiz data from request body
-const extractQuizDataHelper = (req) => ({
+const extractDataHelper = (req) => ({
   name: req.body.name,
   description: req.body.description,
   startTime: req.body.startTime,
@@ -7,4 +7,4 @@ const extractQuizDataHelper = (req) => ({
   password: req.body.password,
 });
 
-module.exports = { extractQuizData: extractQuizDataHelper };
+module.exports = { extractQuizData: extractDataHelper };

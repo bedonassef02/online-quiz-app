@@ -1,5 +1,5 @@
 const Quiz = require('./model/quiz.model');
-const { getQuizActiveStatusFromCache, calculateQuizActiveStatus, cacheQuizActiveStatus } = require('./utils/helpers/is-active-cache.helper');
+const { getQuizActiveStatusFromCache, calculateQuizActiveStatus, cacheQuizActiveStatus } = require('./utils/helpers/caching/is-active.helper');
 
 exports.create = async ({name, description, startTime, duration, password})=>{
     return await Quiz.create({name, description, startTime, duration, password});

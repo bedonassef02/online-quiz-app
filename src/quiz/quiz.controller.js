@@ -1,7 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const quizService = require("./quiz.service");
-const { handleQuizResponse, handleDeleteQuizResponse } = require("./utils/helpers/handle-quiz-response.helper");
-const { extractQuizData } = require("./utils/helpers/extract-quiz-data.helper");
+const { handleQuizResponse, handleDeleteQuizResponse } = require("./utils/helpers/handle-response/response.helper");
+const { extractQuizData } = require("./utils/helpers/extracing/extract-data.helper");
 
 exports.create = asyncHandler(async (req, res) => {
  const quizData = extractQuizData(req);

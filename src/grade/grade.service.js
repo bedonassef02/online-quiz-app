@@ -1,11 +1,11 @@
-const { saveQuizGrade } = require("./utils/helpers/save-quiz-grade.helper");
+const { saveQuizGrade } = require("./utils/helpers/saving/save.helper");
 const QuizGrade = require("./model/grade.model");
 const answersService = require("../answer/answer.service");
 const {
   calculateScoreForAnswer,
   calculateAverageGrade,
   groupAnswersByUserId,
-} = require("./utils/helpers/calculate-score-for-answer.helper");
+} = require("./utils/helpers/calculation/calculate-score.helper");
 
 exports.calculateQuizGrades = async (quizId) => {
   const answers = await answersService.findAll(quizId);

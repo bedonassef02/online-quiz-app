@@ -2,12 +2,12 @@ const { body } = require("express-validator");
 const { handleValidationErrors } = require("../../../utils/middlewares/validation-utils.middleware");
 const {
   checkIfQuizExists,
-} = require("../../../answer/utils/helpers/validation-quiz-activation.helper");
+} = require("../../../answer/utils/helpers/checking/is-active.helper");
 const {
   checkIfQuizIsNotActive,
-} = require("../helpers/check-if-quicz-is-not-active.helper");
-const { checkIfGradeExists } = require("../helpers/check-if-grade-exists.helper");
-const { checkQuizPassword } = require("../../../quiz/utils/helpers/check-quiz-password.helper");
+} = require("../helpers/checking/is-not-active.helper");
+const { checkIfGradeExists } = require("../helpers/checking/is-exists.helper");
+const { checkQuizPassword } = require("../../../quiz/utils/helpers/checking/check-password.helper");
 
 const calculateGradenValidator = [
   

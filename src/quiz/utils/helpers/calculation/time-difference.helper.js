@@ -1,4 +1,4 @@
-function calculateTimeDifferenceHelper(timeDifference) {
+function timeDifferenceHelper(timeDifference) {
     const secondsDifference = Math.ceil(timeDifference / 1000);
     const days = Math.floor(secondsDifference / (60 * 60 * 24));
     const hours = Math.floor((secondsDifference % (60 * 60 * 24)) / (60 * 60));
@@ -14,4 +14,4 @@ function calculateTimeDifferenceHelper(timeDifference) {
     return message.trim().slice(0, -1);
 }
 
-module.exports = {calculateTimeDifference: calculateTimeDifferenceHelper};
+module.exports = {calculateTimeDifference: timeDifferenceHelper};

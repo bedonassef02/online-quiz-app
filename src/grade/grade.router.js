@@ -1,13 +1,13 @@
 const router = require("express").Router();
 
 const gradeController = require("./grade.controller");
-const calculateGradeValidation = require("./utils/validators/calculate-grade.validator");
+const calculateGradeValidation = require("./utils/validators/calculate.validator");
 const {
   findAllGradesValidator,
-} = require("./utils/validators/find-all-grades.validtor");
+} = require("./utils/validators/find-all.validtor");
 const {
   findOneGradeValidator,
-} = require("./utils/validators/find-one-grade.validator");
+} = require("./utils/validators/find-one.validator");
 
 router.post("/", calculateGradeValidation, gradeController.calculateQuizGrades);
 router.get("/", findAllGradesValidator, gradeController.findAll);

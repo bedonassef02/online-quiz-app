@@ -2,10 +2,10 @@ const { query } = require("express-validator");
 const { handleValidationErrors } = require("../../../utils/middlewares/validation-utils.middleware");
 const {
   checkIfQuizExists,
-} = require("../../../answer/utils/helpers/validation-quiz-activation.helper");
+} = require("../../../answer/utils/helpers/checking/is-active.helper");
 const {
   checkQuizQueryPassword,
-} = require("../../../quiz/utils/helpers/check-quiz-password.helper");
+} = require("../../../quiz/utils/helpers/checking/check-password.helper");
 
 const findAllGradesValidator = [
   query("quizId")

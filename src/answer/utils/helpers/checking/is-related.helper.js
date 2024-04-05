@@ -1,7 +1,7 @@
-const questionService = require("../../../question/question.service");
+const questionService = require("../../../../question/question.service");
 
 // Function to validate that the questionId is related to the quizId
-const validateQuestionRelationToQuizHelper = async (value, {req}) => {
+const isRelatedHelper = async (value, {req}) => {
     const {quizId} = req.body;
     for (const answer of value) {
         const question = await questionService.findOne(answer.questionId);
@@ -15,4 +15,4 @@ const validateQuestionRelationToQuizHelper = async (value, {req}) => {
     return true;
 };
 
-module.exports = {validateQuestionRelationToQuiz: validateQuestionRelationToQuizHelper}
+module.exports = {validateQuestionRelationToQuiz: isRelatedHelper}
