@@ -1,5 +1,5 @@
 const Quiz = require('./model/quiz.model');
-const calculateTime = require('./utils/helpers/calculateTime');
+const { getQuizActiveStatusFromCache, calculateQuizActiveStatus, cacheQuizActiveStatus } = require('./utils/helpers/is-active-cache');
 
 exports.create = async ({name, description, startTime, duration, password})=>{
     return await Quiz.create({name, description, startTime, duration, password});
@@ -14,9 +14,12 @@ exports.remove = async(id) => {
 }
 
 exports.isActive = async(id) => {
-    const quiz = await this.findOne(id);
-    
-    const {now, startTime, endTime} = calculateTime(quiz);
+    let isActive = await getQuizActiveStatusFromCache(id);
 
-    return now >= startTime && now <= endTime;
+    if (isActive === null) {
+        isActive = await calculateQuizActiveStatus(id);
+        await cacheQuizActiveStatus(id, isActive);
+    }
+
+    return isActive;
 }

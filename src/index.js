@@ -3,6 +3,7 @@ const { setupExpressApp } = require("./app");
 const { handleGracefulShutdown } = require("./utils/handleGracefulShutdown");
 process.loadEnvFile('./.env')
 
+
 const startApp = async () => {
   
   await connectToDatabase();
