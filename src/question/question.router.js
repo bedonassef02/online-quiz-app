@@ -7,11 +7,13 @@ const deleteQuestionValidator = require('./utils/validators/delete.validator');
 const {
   isAuthMiddleware,
 } = require('../utils/middlewares/auth/is-auth.middleware');
+const { isQuestionOwner } = require('./utils/middlewares/is-quiz-owner');
+const { isAuthToDelete } = require('./utils/middlewares/is-auth-to-delete');
 
 router.use(isAuthMiddleware);
 
 router.get('/', findAllQuestionValidator, questionController.findAll);
-router.post('/', createQuestionValidator, questionController.create);
-router.delete('/:id', deleteQuestionValidator, questionController.remove);
+router.post('/',createQuestionValidator,isQuestionOwner, questionController.create);
+router.delete('/:id',deleteQuestionValidator,isAuthToDelete, questionController.remove);
 
 module.exports = router;
